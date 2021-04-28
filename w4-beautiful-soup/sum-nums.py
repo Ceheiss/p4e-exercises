@@ -11,7 +11,7 @@ url = "http://py4e-data.dr-chuck.net/comments_1213108.html"
 html = urllib.request.urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, 'html.parser')
 
-# Retrieve all span tags
+# Retrieve all a tags
 tags = soup('span')
 numbers = []
 count = 0
