@@ -73,6 +73,7 @@ for entry in all:
 
     print(name, artist, album, count, rating, length, genre)
 
+    # Use SQL to add the values extracted from XML into the DB
     cur.execute('''INSERT OR IGNORE INTO Artist (name) 
         VALUES ( ? )''', ( artist, ) )
     cur.execute('SELECT id FROM Artist WHERE name = ? ', (artist, ))
